@@ -6,7 +6,7 @@ import './App.css';
 // Define our Hello component
 function Hello() {
   // Make sure to return some UI
-  return <h1>Hello Everyoneeeeee</h1>;
+  return <h1>F**k thissss shiet</h1>;
 }
 
 export default Hello;
