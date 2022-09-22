@@ -1,6 +1,8 @@
 // Bring in React instance from React
 import React from "react";
-import "./App.css";
+
+// STYLING SHEETS
+import "./css-sheets/App.css";
 
 // COMPONENTS
 import Header from "./components/Header.js";
