@@ -1,1 +1,1 @@
-# pottedpals-frontend
+# potted-pals-frontend
