@@ -1,12 +1,20 @@
 // Bring in React instance from React
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-// Define our Hello component
-function Hello() {
-  // Make sure to return some UI
-  return <h1>F**k thissss shiet</h1>;
+// COMPONENTS
+import Header from "./components/Header.js";
+
+function App() {
+  return(
+    <div className="App">
+    <Header />
+  </div>
+  )
 }
 
-export default Hello;
+
+  
+
+
+export default App;
