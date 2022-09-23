@@ -1,17 +1,16 @@
 import React from "react";
-// INDIVIDUAL PLANT CARD
 
 // STYLING SHEETS 
 import "../css-sheets/App.css"
-import "../css-sheets/header.css";
+import "../css-sheets/plantCard.css"
 
 function PlantCard(props) {
-    const {name, type, care, description} = props;
+    const { image, name, type, care, description} = props;
 
   return (
-    <div>
-      <div>
-        <img src="" alt="Plant card image"/>
+    <div className="Card">
+      <div className="ImgBox">
+        <img src={`${process.env.PUBLIC_URL}mock-images/${props.image}`} alt="Plant card image"/>
       </div>
 
       <button>✕</button>
