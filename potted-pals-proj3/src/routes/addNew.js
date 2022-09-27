@@ -17,27 +17,27 @@ function AddNew() {
             {/* INPUTS TO FILL IN FOR NEW POST-*/}
             <div className="input-box">
               <input type="text" name="name" />
-              <label for="name">Name</label>
+              <label htmlFor="name">Name</label>
             </div>
 
             <div className="input-box">
               <input type="text" name="type" />
-              <label for="type">Type</label>
+              <label htmlFor="type">Type</label>
             </div>
 
             <div className="input-box">
               <input type="text" name="caretaking" />
-              <label for="caretaking">Care Instructions</label>
+              <label htmlFor="caretaking">Care Instructions</label>
             </div>
 
             <div className="input-box">
               <input type="text" name="description" />
-              <label for="description">Description</label>
+              <label htmlFor="description">Description</label>
             </div>
 
             <div className="input-box">
               <input type="text" name="img" required="" />
-              <label for="img">Image Link | URL Only</label>
+              <label htmlFor="img">Image Link | URL Only</label>
             </div>
 
             <input type="submit" value="Submit" />
