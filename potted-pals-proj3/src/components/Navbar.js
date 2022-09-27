@@ -12,7 +12,7 @@ import "../css-sheets/header.css";
 // Define our Header component
 function Navbar() {
   return (
-    <div class="TopNav">
+    <div className="TopNav">
       <nav >  
         {/* <Link to="/about">About Pals</Link> */}
         <Link to="./contact">Contact Us</Link>

@@ -23,7 +23,7 @@ function Header() {
       <div className="Title">
     
         <h1>POTTED PALS</h1>
-        <nav class="Navbar">
+        <nav className="Navbar">
           <Link to="/succulents">SUCCULENTS</Link> 
           <Link to="./flowers">FLOWERS</Link>
           <Link to="./houseplants">HOUSE PLANTS</Link>
