@@ -17,9 +17,11 @@ function Header() {
   return (
     <div>
   
-      <div className="TopStatusBar"></div>
-      <div className="Title">
+      <div className="TopStatusBar">
       <Navbar />
+      </div>
+      <div className="Title">
+    
         <h1>POTTED PALS</h1>
         <nav class="Navbar">
           <Link to="/succulents">SUCCULENTS</Link> 

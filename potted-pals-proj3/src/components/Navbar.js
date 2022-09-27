@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <div class="TopNav">
       <nav >  
-        <Link to="/about">About Pals</Link>
+        {/* <Link to="/about">About Pals</Link> */}
         <Link to="./contact">Contact Us</Link>
         <Link to="./Login">Login</Link>
         <Link to="./Register">Register</Link>
