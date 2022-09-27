@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import { createRoot } from "react-dom/client"
 
 // IMPORT FOR REACT ROUTER
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //STYLING CSS
@@ -14,17 +14,18 @@ import Succulents from './routes/succulents.js'
 import Flowers from './routes/flowers.js'
 import HousePlants from './routes/housePlants.js'
 import Herbs from './routes/herbs.js'
-import About from './routes/about.js'
+// import About from './routes/about.js'
 import Contact from './routes/contact.js'
 import Login from './routes/login.js'
 import Register from './routes/register.js'
 import AddNew from './routes/addNew.js'
 import YourGarden from './routes/yourGarden.js'
 
+const container = document.getElementById("root");
+const root = createRoot(container); 
 
-
-const rootElement = document.getElementById("root");
-render(
+// const rootElement = document.getElementById("root");
+root.render(
   <BrowserRouter>
      <Routes>
       <Route path="/" element={<App />}>
@@ -32,7 +33,7 @@ render(
         <Route path="flowers" element={<Flowers />} />
         <Route path="housePlants" element={<HousePlants />} />
         <Route path="herbs" element={<Herbs />} />
-        <Route path="about" element={<About />} />
+        {/* <Route path="about" element={<About />} /> */}
         <Route path="contact" element={<Contact />} />   
         <Route path="login" element={<Login />} />   
         <Route path="register" element={<Register />} />  
@@ -42,7 +43,7 @@ render(
     </Routes>
     
   </BrowserRouter>,
-  rootElement
+  // rootElement
 );
 
 

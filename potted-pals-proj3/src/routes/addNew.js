@@ -26,18 +26,18 @@ function AddNew() {
             </div>
 
             <div class="input-box">
-              <input type="text" name="water frequency" />
-              <label for="water frequency">Care Instructions</label>
+              <input type="text" name="caretaking" />
+              <label for="caretaking">Care Instructions</label>
             </div>
 
             <div class="input-box">
-              <input type="text" name="sunlight" />
-              <label for="sunlight">Description</label>
+              <input type="text" name="description" />
+              <label for="description">Description</label>
             </div>
 
             <div class="input-box">
               <input type="text" name="img" required="" />
-              <label for="image">Image Link | URL Only</label>
+              <label for="img">Image Link | URL Only</label>
             </div>
 
             <input type="submit" value="Submit" />
