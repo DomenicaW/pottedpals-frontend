@@ -1,25 +1,37 @@
-// Bring in React instance from React
-import React from "react";
+import { Outlet } from "react-router-dom";
+import React, { Component } from "react";
 
-// STYLING SHEETS
+//  Keeping the below in to remind of Link import in case there are issues in future
+//  import { Outlet, Link } from "react-router-dom";
+
+// Styling
 import "./css-sheets/App.css";
 
 // COMPONENTS
 import Header from "./components/Header.js";
-import PlantList from "./components/PlantList.js"
 
-function App() {
-  return(
-    <div className="App">
-    <Header />
-    <PlantList />
+//ADDING baseURL
+let baseURL = "";
 
-  </div>
-  )
+if (process.env.NODE_ENV === "development") {
+  baseURL = "http://localhost:3000";
+} else {
+  baseURL = "heroku backend url";
 }
+console.log("current base url:", baseURL);
 
 
-  
 
+// CLASS BASED COMPONENT
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Outlet />
+      </div>
+    );
+  }
+}
 
 export default App;
