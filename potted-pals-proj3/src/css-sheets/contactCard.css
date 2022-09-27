@@ -3,17 +3,26 @@
   margin-left: 55px;
 }
 
-/* This is the styling for the line length under the about us, */
+.ContactTitle h2 {
+  font-size: 35px;
+}
+
+.ContactTitle h4 {
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+/* This is the styling for the line length under the about us */
 .ContactTitle h2:after {
   content: "";
   display: block;
   position: relative;
   width: 6%;
   border: 2px solid #a67744;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-/* Contact Div contains the individual cards */
+/* Contact Div contains the individual "cards" for each person  */
 .ContactDiv {
   display: inline-block;
   margin: 0 45px 0 45px;
@@ -28,14 +37,14 @@
 }
 
 .ContactName {
-  font-family: "Source Serif Pro", serif;
-  font-size: 28px;
-  letter-spacing: 2px;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 .ContactCardTitle {
   font-family: "Raleway", sans-serif;
+  font-size: 20px;
   color: #708491;
   display: block;
 }
