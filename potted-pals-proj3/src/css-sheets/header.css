@@ -1,6 +1,12 @@
+.TopStatusBar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  background-color: #a67744;
+}
+
 .Title {
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 5px;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -10,11 +16,35 @@
   margin-bottom: 2em;
   background-color: #b3c1b7;
   color: black;
+  display: block;
 }
 
-.TopStatusBar {
-  box-sizing: border-box;
-  width: 100%;
-  height: 35px;
-  background-color: #a67744;
+.Title h1 {
+  letter-spacing: 5px;
+}
+
+/* ====================
+NAVBAR STYLING
+==================== */
+
+
+
+nav a {
+  margin-top: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding:  0 12px 0 12px; 
+}
+
+nav a:link {
+  color: white;
+}
+
+nav a:hover {
+  /* text-decoration: underline; */
+  color: #354e57;
+  padding: 1px;
+  border-bottom: 4px solid #a67744;
+  text-decoration: none;
 }
