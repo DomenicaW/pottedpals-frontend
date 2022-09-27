@@ -1,25 +1,24 @@
 // Bring in React instance from React
 import React from "react";
 
+import { Outlet, Link } from "react-router-dom";
+
 // STYLING SHEETS
 import "./css-sheets/App.css";
 
 // COMPONENTS
 import Header from "./components/Header.js";
-import PlantList from "./components/PlantList.js"
+
+
 
 function App() {
-  return(
+  return (
     <div className="App">
-    <Header />
-    <PlantList />
-
-  </div>
-  )
+      <Header />
+      {/* <Navbar /> */}
+      <Outlet />
+    </div>
+  );
 }
-
-
-  
-
 
 export default App;
