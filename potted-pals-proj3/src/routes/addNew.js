@@ -3,7 +3,19 @@ import React from "react";
 // STYLING
 import "../css-sheets/addNewForm.css";
 
-function AddNew() {
+class AddNew extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      name: '',
+      type: '',
+      caretaking: '',
+      description: '',
+      img: ''
+    }
+  }
+  
+  render() {
   return (
     <main class="AddNewBody">
        <h3>How should this page be linked?</h3>
@@ -48,5 +60,5 @@ function AddNew() {
     </main>
   );
 }
-
+}
 export default AddNew;
