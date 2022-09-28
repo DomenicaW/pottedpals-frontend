@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 // STYLING 
 import "../css-sheets/plantCard.css";
@@ -7,8 +7,9 @@ import "../css-sheets/plantCard.css";
 import PlantCard from "../components/PlantCard.js";
 
 
-
-function Succulents() {
+// CLASS BASED COMPONENT
+class Succulents extends Component {
+  render() {
     return (
       <main>
         <h2 style={{margintop: "1px"}}>SUCCULENTS</h2>
@@ -27,5 +28,9 @@ function Succulents() {
       </main>
     );
   }
+
+
+  }
+  
 
   export default Succulents
