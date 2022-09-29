@@ -1,7 +1,9 @@
 /* ====================
 HEADER COMPONENT
 ==================== */
-import React from "react";
+// import React from "react";
+import React, { Component } from "react";
+
 // IMPORT FOR REACT ROUTER
 import { Link } from "react-router-dom";
 
@@ -12,8 +14,9 @@ import Navbar from "./Navbar.js";
 // STYLING
 import "../css-sheets/header.css";
 
-// Define our Header component
-function Header() {
+// CLASS BASED COMPONENT
+class Header extends Component {
+render () {
   return (
     <div>
   
@@ -33,5 +36,9 @@ function Header() {
     </div>
   );
 }
+
+  
+}
+
 
 export default Header;

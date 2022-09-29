@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // COMPONENTS
-import Navbar from "../components/Navbar.js";
+
 
 // CLASS BASED COMPONENT
 class Register extends Component {
