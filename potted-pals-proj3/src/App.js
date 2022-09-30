@@ -31,6 +31,26 @@ class App extends Component {
     }
   }
 
+  //lifecyle
+  componentDidMount(){
+    this.getPlants()
+  }
+
+  getPlants = () => {
+    fetch(baseURL + '/')
+     .then((res) => {
+      if (res.status === 200) {
+       return res.json();
+      } else {
+       return [];
+      }
+     })
+     .then((data) => {
+      console.log(data);
+      this.setState({ plants: data.plants });
+     });
+   }
+
 
   render() {
     return (
