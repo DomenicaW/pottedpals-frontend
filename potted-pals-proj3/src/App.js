@@ -9,6 +9,7 @@ import "./css-sheets/App.css";
 
 // COMPONENTS
 import Header from "./components/Header.js";
+import HousePlants from "./page-routes/HousePlants.js";
 
 //ADDING baseURL
 let baseURL = "";
@@ -50,7 +51,7 @@ class App extends Component {
     this.getPlants();
   }
 
-  render() {
+  render() {   
     return (
       <div className="App">
         <Header />

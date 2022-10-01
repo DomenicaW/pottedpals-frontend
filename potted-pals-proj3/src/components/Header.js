@@ -5,7 +5,7 @@ HEADER COMPONENT
 import React, { Component } from "react";
 
 // IMPORT FOR REACT ROUTER
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // COMPONENT
 //COMPONENTS
@@ -16,7 +16,7 @@ import "../css-sheets/header.css";
 
 // CLASS BASED COMPONENT
 class Header extends Component {
-render () {
+ render () {
   return (
     <div>
   
@@ -38,7 +38,12 @@ render () {
 }
 
   
-}
+ }
+
+  // const location = useLocation ()
+  // console.log("Location", location )
+ 
+
 
 
 export default Header;
