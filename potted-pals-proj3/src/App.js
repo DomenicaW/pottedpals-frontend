@@ -14,7 +14,7 @@ import Header from "./components/Header.js";
 let baseURL = "";
 
 if (process.env.NODE_ENV === "development") {
-  baseURL = "http://localhost:3000";
+  baseURL = "http://localhost:3001";
 } else {
   baseURL = "heroku backend url";
 }
@@ -24,6 +24,34 @@ console.log("current base url:", baseURL);
 
 // CLASS BASED COMPONENT
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      plants: []
+    }
+  }
+
+  //lifecyle
+  componentDidMount(){
+    this.getPlants()
+  }
+
+  getPlants = () => {
+    fetch(baseURL + '/')
+     .then((res) => {
+      if (res.status === 200) {
+       return res.json();
+      } else {
+       return [];
+      }
+     })
+     .then((data) => {
+      console.log(data);
+      this.setState({ plants: data.plants });
+     });
+   }
+
+
   render() {
     return (
       <div className="App">
