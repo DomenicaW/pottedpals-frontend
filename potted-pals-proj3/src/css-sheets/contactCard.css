@@ -1,0 +1,60 @@
+.ContactTitle {
+  text-align: left;
+  margin-left: 55px;
+}
+
+.ContactTitle h2 {
+  font-size: 35px;
+}
+
+.ContactTitle h4 {
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+/* This is the styling for the line length under the about us */
+.ContactTitle h2:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 6%;
+  border: 2px solid #a67744;
+  margin-top: 6px;
+}
+
+/* Contact Div contains the individual "cards" for each person  */
+.ContactDiv {
+  display: inline-block;
+  margin: 0 45px 0 45px;
+  text-align: center;
+  /* border: 2px solid black; */
+}
+
+.ContactText {
+  margin: 0;
+  text-align: center;
+  display: block;
+}
+
+.ContactName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.ContactCardTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #708491;
+  display: block;
+}
+
+/*  THE CSS BELOW IS FOR CSS CIRCLE BEFORE IT WAS REPLACED ASSET  */
+/* .ImgCircle {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    background-color: #a67744;
+    border-radius: 50%;
+    border: solid 4px #b3c1b7;
+  }*/
