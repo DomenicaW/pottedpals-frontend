@@ -2,10 +2,14 @@
 HEADER COMPONENT
 ==================== */
 // import React from "react";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+
+// import React, { Component } from "react";
 
 // IMPORT FOR REACT ROUTER
-import { Link, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
+
+import { App } from "../App.js"
 
 // COMPONENT
 //COMPONENTS
@@ -15,8 +19,12 @@ import Navbar from "./Navbar.js";
 import "../css-sheets/header.css";
 
 // CLASS BASED COMPONENT
-class Header extends Component {
- render () {
+function Header () {
+//  render () {
+  // console.log ("plants", {plants});
+  const [data, setData] = useState({
+    name: ""
+  });
   return (
     <div>
   
@@ -35,8 +43,7 @@ class Header extends Component {
       </div>
     </div>
   );
-}
-
+// }
   
  }
 

@@ -1,9 +1,10 @@
-import React from "react";
+// import React, { useState } from "react";
+import React from "react"
 import { createRoot } from "react-dom/client";
 
 // IMPORT FOR REACT ROUTER
 // import { render } from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 
 //STYLING CSS
 import "./css-sheets/index.css";
@@ -27,6 +28,9 @@ const root = createRoot(container);
 // const rootElement = document.getElementById("root");
 root.render(
   <BrowserRouter>
+  
+  
+
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="succulents" element={<Succulents />} />
