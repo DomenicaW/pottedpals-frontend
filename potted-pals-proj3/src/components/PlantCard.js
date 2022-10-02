@@ -15,7 +15,8 @@ class PlantCard extends Component {
   render() {
     console.log ("data", this.state)
     return (
-      <div className="Card">
+    
+ <div className="Card">
         <div className="ImgBox">
           <img
             src={this.props.img}
@@ -27,9 +28,12 @@ class PlantCard extends Component {
 
         <h5 className="PlantType"> {this.props.type} </h5>
         <h3 className="PlantName"> {this.props.name} </h3>
-        {/* <h5>Care: </h5> */}
         <h5 className="PlantDescription"> {this.props.description}</h5>
       </div>
+
+
+
+     
     );
   }
 }

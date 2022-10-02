@@ -17,8 +17,8 @@ class Navbar extends Component {
         <nav>
           {/* <Link to="/about">About Pals</Link> */}
           <Link to="./contact">Contact Us</Link>
-          <Link to="./Login">Login</Link>
-          <Link to="./Register">Register</Link>
+          {/* <Link to="./Login">Login</Link> */}
+          {/* <Link to="./Register">Register</Link> */}
           <Link to="./addNew">Add New Form</Link>
         </nav>
       </div>

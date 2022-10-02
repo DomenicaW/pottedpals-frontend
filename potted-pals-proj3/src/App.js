@@ -61,8 +61,7 @@ class App extends Component {
         <Header />
         {this.state.plants.map((plant)=>
          <PlantCard key={plant._id} img={plant.img} name ={plant.name} type={plant.type} description={plant.description}></PlantCard>
-        
-        )}
+)}
         
         <Outlet />
       </div>
