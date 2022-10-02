@@ -10,6 +10,7 @@ import "./css-sheets/App.css";
 // COMPONENTS
 import Header from "./components/Header.js";
 import HousePlants from "./page-routes/HousePlants.js";
+import PlantCard from "./components/PlantCard.js";
 
 //ADDING baseURL
 let baseURL = "";
@@ -30,8 +31,15 @@ class App extends Component {
     };
   }
 
-  // This is a method because it is associated with a class
-  getPlants = () => {
+  // componentDidMount
+  componentDidMount() {
+    this.getPlants();
+  }
+
+
+
+   // This is a method because it is associated with a class
+   getPlants = () => {
     fetch(baseURL + "/plants")
       .then(res => {
         if (res.status === 200) {
@@ -46,15 +54,16 @@ class App extends Component {
       });
   };
 
-  // componentDidMount
-  componentDidMount() {
-    this.getPlants();
-  }
-
   render() {   
     return (
       <div className="App">
+
         <Header />
+        {this.state.plants.map((plant)=>
+         <PlantCard key={plant._id} img={plant.img} name ={plant.name} type={plant.type} description={plant.description}></PlantCard>
+        
+        )}
+        
         <Outlet />
       </div>
     );

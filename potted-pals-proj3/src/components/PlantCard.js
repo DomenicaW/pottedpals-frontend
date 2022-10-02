@@ -4,18 +4,21 @@ import React, { Component } from "react";
 import "../css-sheets/App.css";
 import "../css-sheets/plantCard.css";
 
+// import App from "./App.js"
+
 // CLASS BASED COMPONENT
 class PlantCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state =  {};
   }
   render() {
+    console.log ("data", this.state)
     return (
       <div className="Card">
         <div className="ImgBox">
           <img
-            src={`${process.env.PUBLIC_URL}mock-images/${this.props.image}`}
+            src={this.props.img}
             alt="Plant card"
           />
         </div>
