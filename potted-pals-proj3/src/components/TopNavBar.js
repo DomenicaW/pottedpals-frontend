@@ -7,7 +7,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 // STYLING
-import "../css-sheets/header.css";
+import "../css-sheets/topNavBar.css";
 
 // CLASS BASED COMPONENT
 class Navbar extends Component {
@@ -15,11 +15,13 @@ class Navbar extends Component {
     return (
       <div className="TopNav">
         <nav>
-          {/* <Link to="/about">About Pals</Link> */}
-          <Link to="./contact">Contact Us</Link>
-          {/* <Link to="./Login">Login</Link> */}
-          {/* <Link to="./Register">Register</Link> */}
-          <Link to="./addNew">Add New Form</Link>
+          <ul>
+            {/* <Link to="/about">About Pals</Link> */}
+            <Link className="Link" to="./contact">Contact Us</Link>
+            {/* <Link to="./Login">Login</Link> */}
+            {/* <Link to="./Register">Register</Link> */}
+            <Link className="Link" to="./addNew">Add New Form</Link>
+          </ul>
         </nav>
       </div>
     );

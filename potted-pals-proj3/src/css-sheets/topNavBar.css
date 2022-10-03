@@ -1,0 +1,25 @@
+.TopNav {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  background-color: #a67744;
+  padding: 12px;
+  text-align: center;
+}
+
+.TopNav nav {
+  margin-top: -10px;
+}
+
+.Link {
+  color: white;
+  margin: 25px;
+}
+
+.Link:hover {
+  color: #354e57;
+  padding: 1px;
+  border-bottom: 4px solid #b3c1b7;
+  text-decoration: none;
+}

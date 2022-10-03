@@ -10,18 +10,14 @@ import "../css-sheets/plantCard.css";
 class PlantCard extends Component {
   constructor(props) {
     super(props);
-    this.state =  {};
+    this.state = {};
   }
   render() {
-    console.log ("data", this.state)
+    console.log("data", this.state);
     return (
-    
- <div className="Card">
+      <div className="Card">
         <div className="ImgBox">
-          <img
-            src={this.props.img}
-            alt="Plant card"
-          />
+          <img src={this.props.img} alt="Plant card" />
         </div>
 
         <button>✕</button>
@@ -30,10 +26,6 @@ class PlantCard extends Component {
         <h3 className="PlantName"> {this.props.name} </h3>
         <h5 className="PlantDescription"> {this.props.description}</h5>
       </div>
-
-
-
-     
     );
   }
 }
