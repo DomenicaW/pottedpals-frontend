@@ -38,7 +38,13 @@
   color: white;
   font-weight: bold;
   transform: rotate(45deg);
-  margin: -105px;
+  /* margin: -105px; */
+  /* align-content: center; */
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 80px;
+  /* align-items: center; */
+
 }
 
 .Card button:focus {
