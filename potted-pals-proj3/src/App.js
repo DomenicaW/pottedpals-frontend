@@ -127,9 +127,6 @@ class App extends Component {
       <>
         <TopNavBar />
         <Header />
-        {this.state.plants.map((plant)=>
-         <PlantCard key={plant._id} img={plant.img} name ={plant.name} type={plant.type} description={plant.description}></PlantCard>
-)}
 
 
       
@@ -144,6 +141,10 @@ class App extends Component {
           <Route path="/herbs" element={<Herbs   />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        {this.state.plants.map((plant)=>
+         <PlantCard key={plant._id} img={plant.img} name ={plant.name} type={plant.type} description={plant.description}></PlantCard>
+)}
+
         <Outlet />
         
       </>
