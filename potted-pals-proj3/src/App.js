@@ -42,54 +42,6 @@ if (process.env.NODE_ENV === "development") {
 }
 console.log("current base url:", baseURL);
 
-// CLASS BASED COMPONENT
-// class App extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       plants: [],
-//     };
-//   }
-
-//   // componentDidMount
-//   componentDidMount() {
-//     this.getPlants();
-//   }
-
-//    // This is a method because it is associated with a class
-//    getPlants = () => {
-//     fetch(baseURL + "/plants")
-//       .then(res => {
-//         if (res.status === 200) {
-//           return res.json();
-//         } else {
-//           return [];
-//         }
-//       })
-//       .then(data => {
-//         console.log("data:", data);
-//         this.setState({ plants: data.plants });
-//       });
-//   };
-
-//   render() {
-//     return (
-//       <div className="App">
-
-//         <Header />
-//         <Link to={{
-//           pathname:'/flowers',
-//           state:
-//         }} />
-
-//         <Outlet />
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -98,7 +50,7 @@ class App extends Component {
     };
   }
 
-  //   // componentDidMount
+// componentDidMount
   componentDidMount() {
     this.getPlants();
   }
@@ -119,34 +71,35 @@ class App extends Component {
   };
 
   render() {
-    const plantList = this.state.plants
-    console.log ("Plantlist?", plantList);
-
+    const plantList = this.state.plants;
+    console.log("Plantlist?", plantList);
 
     return (
       <>
         <TopNavBar />
         <Header />
 
-
-      
-
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/addNew" element={<AddNew />} />
-          <Route path="/succulents" element={<Succulents  />} />
+          <Route path="/succulents" element={<Succulents />} />
           <Route path="/succulent/:id" element={<SucculentShow />} />
           <Route path="/flowers" element={<Flowers />} />
           <Route path="/housePlants" element={<HousePlants />} />
-          <Route path="/herbs" element={<Herbs   />} />
+          <Route path="/herbs" element={<Herbs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        {this.state.plants.map((plant)=>
-         <PlantCard key={plant._id} img={plant.img} name ={plant.name} type={plant.type} description={plant.description}></PlantCard>
-)}
+        {this.state.plants.map(plant => (
+          <PlantCard
+            key={plant._id}
+            img={plant.img}
+            name={plant.name}
+            type={plant.type}
+            description={plant.description}
+          ></PlantCard>
+        ))}
 
         <Outlet />
-        
       </>
     );
   }
