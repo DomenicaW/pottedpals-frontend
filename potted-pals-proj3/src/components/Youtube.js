@@ -6,7 +6,7 @@ const result = 3
 
 https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC9afZE1IVR6JhOjKXiEddIA&key=AIzaSyCEXxjr-ZNVAWdnx0AKpUia1qoPxweqSPA&maxResults=3
 
-let
+let musicURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId${channelId}&key=${API}&maxResults=${result}`
 
 class Youtube extends Component {
     render(){
