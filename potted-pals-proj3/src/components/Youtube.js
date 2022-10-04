@@ -22,7 +22,10 @@ class Youtube extends Component {
       fetch(musicURL)
       .then((response) => response.json())
       .then((responseJson) => {
-        console.log(responseJson);
+        // console.log(responseJson);
+      const ytmusic = responseJson.items.map(obj => obj.id.videoId);
+      this.setState({ytmusic});
+      console.log(this.state.ytmusic)
       })
     }
 
