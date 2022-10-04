@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 const API = 'AIzaSyCEXxjr-ZNVAWdnx0AKpUia1qoPxweqSPA';
 const channelId = 'UC9afZE1IVR6JhOjKXiEddIA';
-const result = 3
+const result = 1
 
 //string interpolation from video object
 let musicURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId${channelId}&key=${API}&maxResults=${result}`
@@ -33,10 +33,16 @@ class Youtube extends Component {
       // console.log(musicURL)
       // console.log(this.state.ytmusic)
       return(
-        <div className ='youtube'>
+        <div>
         <button onClick={this.clicked}>Click for Calm</button>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fASV9M32u3k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
+        {
+          this.state.musicURL.map((link, i) => {
+            console.log(link);
+            let video = <div key={i} className ='youtube'><iframe width="560" height="315" src={link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
+            return video;
+          })
+        }
+          {this.video}
         </div>
       );
     }
