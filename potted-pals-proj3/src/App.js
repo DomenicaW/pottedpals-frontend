@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Route, Routes, NavLink, Outlet, Link } from "react-router-dom";
 
+
+
 //  Keeping the below in to remind of Link import in case there are issues in future
 //  import { Outlet, Link } from "react-router-dom";
 
@@ -25,6 +27,9 @@ import Herbs from "./page-routes/Herbs.js";
 import NotFound from "./page-routes/NotFound.js";
 
 import PlantCard from "./components/PlantCard.js";
+
+//API component:
+import Youtube from "./components/Youtube.js";
 
 // UNUSED COMPONENTS - BUT MAY ADD LATER IF THERE IS TIME
 // import About from './page-routes/About.js'
@@ -129,7 +134,7 @@ class App extends Component {
         <Header />
 
 
-      
+
 
         <Routes>
           <Route path="/contact" element={<Contact />} />
@@ -146,8 +151,10 @@ class App extends Component {
 )}
 
         <Outlet />
-        
+
       </>
+
+
     );
   }
 }
