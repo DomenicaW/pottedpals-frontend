@@ -23,14 +23,15 @@ class Youtube extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         // console.log(responseJson);
-      const ytmusic = responseJson.items.map(obj => obj.id.videoId);
+      const ytmusic = responseJson.items.map(obj =>"https://www.youtube.com/embed/"+ obj.id.videoId);
       this.setState({ytmusic});
-      console.log(this.state.ytmusic)
+      // console.log(this.state.ytmusic)
       })
     }
 
     render(){
       // console.log(musicURL)
+      // console.log(this.state.ytmusic)
       return(
         <div className ='youtube'>
         <button onClick={this.clicked}>Click for Calm</button>
