@@ -3,6 +3,7 @@ HEADER COMPONENT
 ==================== */
 // import React from "react";
 import React, { Component, useState } from "react";
+import Youtube from './Youtube';
 
 // import React, { Component } from "react";
 
@@ -26,14 +27,15 @@ function Header() {
   });
   return (
     <div>
+
       <div className="TopStatusBar">
-    
+
       </div>
       <div className="Title">
         <h1>POTTED PALS</h1>
         <nav className="Navbar">
           <ul>
-            <Link to="/succulents">SUCCULENTS</Link>
+            <Link to="./succulents">SUCCULENTS</Link>
             <Link to="./flowers">FLOWERS</Link>
             <Link to="./houseplants">HOUSE PLANTS</Link>
             <Link to="./herbs">HERBS</Link>
@@ -42,9 +44,7 @@ function Header() {
       </div>
     </div>
   );
-  // }
 }
-
 
 // const location = useLocation ()
 // console.log("Location", location )
