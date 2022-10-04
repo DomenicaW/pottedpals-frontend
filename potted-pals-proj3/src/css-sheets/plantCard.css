@@ -1,63 +1,73 @@
+
+
 .Card {
-    background-color: #ffffff;
-    width: 200px;
-    height: 400px;
-    margin: 25px;
-    background: white;
-    border-radius: 40px;
-    box-shadow: 2px 2px var(--purple);
-    display: inline-block;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  
-  .ImgBox {
-    width: 200px;
-    height: 200px;
-    /* border: solid 1px black; */
-    border-radius: 40px 40px 0px 0px;
-  }
-  
-  .ImgBox img {
-    width: 200px;
-    height: 200px;
-    border-radius: 40px 40px 0px 0px;
-    object-fit: cover;
-  }
-  
-  .Card button {
-    border: none;
-    background-color: black;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-    transform: rotate(45deg);
-    margin: -105px;
-  }
-  
-  .Card button:focus {
-    border: none;
-    outline: none;
-  }
-  
-  .PlantType {
-    font-family: "Raleway", sans-serif;
-    font-size: 9px;
-    color: #708491;
-  }
-  .PlantName {
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    color: #a67744;
-    margin: 5px;
-  }
-  
-  .PlantDescription {
-    font-family: "Raleway", sans-serif;
-    font-size: 11px;
-    padding: 10px 15px 0px 15px;
-    margin-top: 0;
-    line-height: 1.4;
-  }
-  
+  background-color: #ffffff;
+  width: 200px;
+  height: 500px;
+  margin: 25px;
+  background: white;
+  border-radius: 40px;
+  box-shadow: 2px 2px var(--purple);
+  /* display: inline-block; -- this is currently beign ignored due to the float below */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* border: solid 1px black; */
+  float: left;
+  justify-content: center;
+}
+
+.ImgBox {
+  width: 200px;
+  height: 200px;
+  /* border: solid 1px black; */
+  border-radius: 40px 40px 0px 0px;
+}
+
+.ImgBox img {
+  width: 200px;
+  height: 200px;
+  border-radius: 40px 40px 0px 0px;
+  object-fit: cover;
+}
+
+.Card button {
+  border: none;
+  background-color: black;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  transform: rotate(45deg);
+  /* margin: -105px; */
+  /* align-content: center; */
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 80px;
+  /* align-items: center; */
+
+}
+
+.Card button:focus {
+  border: none;
+  outline: none;
+}
+
+.PlantType {
+  font-family: "Raleway", sans-serif;
+  font-size: 9px;
+  color: #708491;
+}
+.PlantName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #a67744;
+  margin: 5px;
+}
+
+.PlantDescription {
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  padding: 10px 15px 0px 15px;
+  margin-top: 0;
+  line-height: 1.4;
+}
