@@ -37,10 +37,6 @@ class Youtube extends Component {
     console.log(this.state.ytmusic);
     return (
       <>
-<<<<<<< HEAD:potted-pals-proj3/src/page-routes/Youtube.js
-=======
-
->>>>>>> 9545358c7a4b1eed86f93647134fb9419d57e4fd:src/page-routes/Youtube.js
         <div>
           <button style={{color: "red"}} onClick={this.clicked}>Click for Calm</button>
           {this.state.ytmusic.map((link, i) => {
@@ -62,11 +58,6 @@ class Youtube extends Component {
           })}
 
         </div>
-<<<<<<< HEAD:potted-pals-proj3/src/page-routes/Youtube.js
-  
-=======
-
->>>>>>> 9545358c7a4b1eed86f93647134fb9419d57e4fd:src/page-routes/Youtube.js
       </>
     );
   }

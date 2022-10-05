@@ -15,12 +15,14 @@ import "./css-sheets/plantCard.css";
 import TopNavBar from "./components/TopNavBar.js";
 import Contact from "./page-routes/Contact.js";
 import AddNew from "./page-routes/AddNew.js";
+import YourGarden from "./page-routes/YourGarden.js";
 // components associated with header which includes the indivudal plant pages
 import Header from "./components/Header.js";
 import Succulents from "./page-routes/Succulents.js";
 import SucculentShow from "./page-routes/SucculentShow.js";
 import Flowers from "./page-routes/Flowers.js";
 import HousePlants from "./page-routes/HousePlants.js";
+
 
 import Herbs from "./page-routes/Herbs.js";
 
@@ -35,7 +37,7 @@ import Youtube from "./page-routes/Youtube.js";
 // import About from './page-routes/About.js'
 // import Login from "./page-routes/Login.js";
 // import Register from "./page-routes/Register.js";
-// import YourGarden from "./page-routes/YourGarden.js";
+
 
 //ADDING baseURL
 let baseURL = "";
@@ -87,6 +89,7 @@ class App extends Component {
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/addNew" element={<AddNew />} />
+          <Route path="/yourGarden" element={<YourGarden />} />
           <Route path="/succulents" element={<Succulents />} />
           <Route path="/succulent/:id" element={<SucculentShow />} />
           <Route path="/flowers" element={<Flowers />} />
