@@ -3,14 +3,12 @@ HEADER COMPONENT
 ==================== */
 // import React from "react";
 import React, { Component, useState } from "react";
-
+import Youtube from '../page-routes/Youtube';
 
 // import React, { Component } from "react";
 
 // IMPORT FOR REACT ROUTER
-// <<<<<<< HEAD
-// import { Link } from "react-router-dom";
-// =======
+
 import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 
 import { App } from "../App.js";
@@ -41,9 +39,9 @@ function Header() {
         <nav className="Navbar">
           <ul>
             <Link to="/succulents">SUCCULENTS</Link>
-            <Link to="./flowers">FLOWERS</Link>
-            <Link to="./houseplants">HOUSE PLANTS</Link>
-            <Link to="./herbs">HERBS</Link>
+            <Link to="/flowers">FLOWERS</Link>
+            <Link to="/houseplants">HOUSE PLANTS</Link>
+            <Link to="/herbs">HERBS</Link>
           </ul>
         </nav>
       </div>
@@ -54,7 +52,7 @@ function Header() {
 
 // <<<<<<< HEAD
 
- 
+
 
   // const location = useLocation ()
   // console.log("Location", location )
