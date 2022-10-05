@@ -43,7 +43,7 @@ let baseURL = "";
 if (process.env.NODE_ENV === "development") {
   baseURL = "http://localhost:3000";
 } else {
-  baseURL = "heroku backend url";
+  baseURL = "https://potted-pals-frontend.herokuapp.com/plants";
 }
 console.log("current base url:", baseURL);
 
