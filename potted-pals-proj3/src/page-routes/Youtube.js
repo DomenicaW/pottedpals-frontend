@@ -5,8 +5,9 @@ const API = "AIzaSyCEXxjr-ZNVAWdnx0AKpUia1qoPxweqSPA";
 const channelId = "UC9afZE1IVR6JhOjKXiEddIA";
 const result = 3;
 
+//https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC9afZE1IVR6JhOjKXiEddIA&key=AIzaSyCEXxjr-ZNVAWdnx0AKpUia1qoPxweqSPA&maxResults=3
 //string interpolation from video object
-let musicURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId${channelId}&key=${API}&maxResults=${result}`;
+let musicURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&key=${API}&maxResults=${result}`;
 
 class Youtube extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class Youtube extends Component {
     console.log(this.state.ytmusic);
     return (
       <>
-      
+
         <div>
           <button style={{color: "red"}} onClick={this.clicked}>Click for Calm</button>
           {this.state.ytmusic.map((link, i) => {
@@ -56,7 +57,7 @@ class Youtube extends Component {
             );
             return video;
           })}
-          {this.video}
+
         </div>
 
       </>
