@@ -18,7 +18,7 @@ class Navbar extends Component {
           <ul>
             {/* <Link to="/about">About Pals</Link> */}
             <Link className="Link" to="./contact">Contact Us</Link>
-            {/* <Link to="./Login">Login</Link> */}
+            <Link to="./ytapi">Click Here For Calm</Link>
             {/* <Link to="./Register">Register</Link> */}
             <Link className="Link" to="./addNew">Add New Form</Link>
           </ul>
