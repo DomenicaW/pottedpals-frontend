@@ -37,7 +37,6 @@ class Youtube extends Component {
     console.log(this.state.ytmusic);
     return (
       <>
-
         <div>
           <button style={{color: "red"}} onClick={this.clicked}>Click for Calm</button>
           {this.state.ytmusic.map((link, i) => {
@@ -59,7 +58,6 @@ class Youtube extends Component {
           })}
 
         </div>
-
       </>
     );
   }

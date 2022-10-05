@@ -21,6 +21,7 @@ class Navbar extends Component {
             <Link to="./ytapi">Click Here For Calm</Link>
             {/* <Link to="./Register">Register</Link> */}
             <Link className="Link" to="./addNew">Add New Form</Link>
+            <Link to="./yourGarden">Your Garden</Link>
           </ul>
         </nav>
       </div>
