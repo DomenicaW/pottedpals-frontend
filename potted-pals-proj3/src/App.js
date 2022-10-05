@@ -29,7 +29,7 @@ import NotFound from "./page-routes/NotFound.js";
 import PlantCard from "./components/PlantCard.js";
 
 //API component:
-import Youtube from "./components/Youtube.js";
+import Youtube from "./page-routes/Youtube.js";
 
 // UNUSED COMPONENTS - BUT MAY ADD LATER IF THERE IS TIME
 // import About from './page-routes/About.js'
@@ -92,8 +92,10 @@ class App extends Component {
           <Route path="/flowers" element={<Flowers />} />
           <Route path="/housePlants" element={<HousePlants />} />
           <Route path="/herbs" element={<Herbs />} />
+          <Route path="/ytapi" element={<Youtube />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        
         {this.state.plants.map(plant => (
           <PlantCard
             key={plant._id}
