@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 const API = 'AIzaSyCEXxjr-ZNVAWdnx0AKpUia1qoPxweqSPA';
 const channelId = 'UC9afZE1IVR6JhOjKXiEddIA';
-const result = 1
+const result = 3
 
 //string interpolation from video object
 let musicURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId${channelId}&key=${API}&maxResults=${result}`
@@ -48,4 +48,4 @@ class Youtube extends Component {
     }
 }
 
-export default Youtube;
+// export default Youtube;
