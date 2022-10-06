@@ -5,6 +5,30 @@ import "../css-sheets/addNewForm.css";
 
 // CLASS BASED COMPONENT
 class AddNew extends Component {
+constructor(props){
+  super(props)
+  this.state = {
+    name:'',
+    type:'',
+    caretaking:'',
+    description:'',
+    img:''
+  }
+}
+
+handleChange = (event) => {
+  this.setState({
+    [event.target.id]: event.target.value
+  })
+}
+
+handleSubmit = (event) => {
+  event.preventDefault()
+  fetch(`${process.env.REACT_APP_BACKEND_URL}`,{
+    method: 'POST'
+  })
+}
+
   render() {
     return (
       <main className="AddNewBody">
