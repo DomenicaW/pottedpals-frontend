@@ -77,6 +77,28 @@ class App extends Component {
       });
   };
 
+  //HANDLE ADD AND DELETE FUNCTIONS
+  handleAddPlant = (plant) => {
+		const copyPlants = [...this.state.plants];
+		copyPlants.unshift(plant);
+		this.setState({ plants: copyPlants });
+	};
+
+  handleDelete = (id) => {
+		fetch(baseURL + id, {
+			method: 'DELETE',
+			credentials: "include"
+		}).then( res => {
+			const copyPlants = [...this.state.plants];
+			const findIndex = this.state.plants.findIndex(
+					(plant) => plant._id === id
+				);
+			 copyPlants.splice(findIndex, 1);
+			 this.setState({ plants: copyPlants });
+		})
+	}
+
+
   render() {
     const plantList = this.state.plants;
     console.log("Plantlist?", plantList);

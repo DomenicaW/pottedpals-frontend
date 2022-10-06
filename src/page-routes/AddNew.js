@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { rawListeners } from "../../../pottedpals-backend/models/Plant";
 
 // STYLING
 import "../css-sheets/addNewForm.css";
@@ -25,8 +26,35 @@ handleChange = (event) => {
 handleSubmit = (event) => {
   event.preventDefault()
   fetch(`${process.env.REACT_APP_BACKEND_URL}`,{
-    method: 'POST'
+    method: 'POST',
+    body: JSON.stringify({
+      name: this.state.name,
+      type: this.state.type,
+      caretaking: this.state.caretaking,
+      description: this.state.description,
+      img: this.state.img
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
   })
+  .then(res=> {
+    if(res.ok) {
+      return res.json()
+    }
+    throw new Error(res)
+  })
+  .then(resJson => {
+    this.props.handleAddPlant(resJson)
+    this.setState({
+      name:'',
+      type:'',
+      caretaking:'',
+      description:'',
+      img:''
+    })
+  })
+  .catch((err) => {console.log(err)})
 }
 
   render() {
