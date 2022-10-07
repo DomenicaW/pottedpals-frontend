@@ -13,7 +13,7 @@ class PlantCard extends Component {
     this.state = {};
   }
   render() {
-    console.log("data", this.state);
+    // console.log("data", this.state);
     return (
       <div className="Card">
         <div className="ImgBox">

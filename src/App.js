@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Route, Routes, NavLink, Outlet, Link } from "react-router-dom";
 
-
-
 //  Keeping the below in to remind of Link import in case there are issues in future
 //  import { Outlet, Link } from "react-router-dom";
 
@@ -23,13 +21,12 @@ import SucculentShow from "./page-routes/SucculentShow.js";
 import Flowers from "./page-routes/Flowers.js";
 import HousePlants from "./page-routes/HousePlants.js";
 
-
 import Herbs from "./page-routes/Herbs.js";
 
 import NotFound from "./page-routes/NotFound.js";
 
 import PlantCard from "./components/PlantCard.js";
-
+import AllPlants from "./page-routes/AllPlants.js";
 //API component:
 import Youtube from "./page-routes/Youtube.js";
 
@@ -38,8 +35,7 @@ import Youtube from "./page-routes/Youtube.js";
 // import Login from "./page-routes/Login.js";
 // import Register from "./page-routes/Register.js";
 
-
-//ADDING baseURL
+// //ADDING baseURL
 let baseURL = "";
 
 if (process.env.NODE_ENV === "development") {
@@ -54,32 +50,74 @@ class App extends Component {
     super(props);
     this.state = {
       plants: [],
+      succulent: [],
+      herb: [],
+      flowers: [],
     };
   }
 
-// componentDidMount
-  componentDidMount() {
-    this.getPlants();
-  }
+  // // componentDidMount
+  // componentDidMount() {
+  //   this.getPlants();
+  // }
 
-  getPlants = () => {
-    fetch(baseURL + "/plants")
-      .then(res => {
-        if (res.status === 200) {
-          return res.json();
-        } else {
-          return [];
-        }
-      })
-      .then(data => {
-        console.log("data:", data);
-        this.setState({ plants: data.plants });
-      });
-  };
+  // getPlants = () => {
+  //   fetch(baseURL + "/plants")
+  //     .then(res => {
+  //       if (res.status === 200) {
+  //         return res.json();
+  //       } else {
+  //         return [];
+  //       }
+  //     })
+  //     .then(data => {
+  //       console.log("data:", data);
+  //       this.setState({ plants: data.plants });
+  //     });
+  // };
+
+  // sortPlant = () => {
+  //  const plantsArray = this.state.plants
+  //   //   if (plantsArray.type === "succulent")
+  //       console.log("plants Array", this.state);
+  // };
+
+  // sortSucc() {
+  //   fetch(baseURL = "/plants")
+  //   .then (res => {
+  //     if (res.status === 200) {
+  //       return res.json();
+  //   } else{
+  //     return []
+  //    }
+  // })
+  // .then(succulentData => {
+  //   // if (plant.type === succulent)
+  //   console.log ("succluent", succulentData)
+  //   // this.setState({ succulent })
+
+  // })}
+  //   this.setState({ succulents: [...this.state.plants, newSucculent]})
+  //   console.log ("Suculent function", this.state.succulent )
+  // }
+  // sortPlant = () => {
+  //   const plantList = this.state.plants;
+  //   console.log("type test", plantList);
+  //   // if (type === succulent)
+  //   // if (type === flowers),
+  //   // if (type === herb),
+  //   // if
+  //   // push into array
+  //   // else if
+  //   // else
+  // };
+  // thiis is what should go in the element that connects to the routes
+  // succulentArr = {{succulent}}
 
   render() {
-    const plantList = this.state.plants;
-    console.log("Plantlist?", plantList);
+    // const plantList = this.state.plants;
+    // console.log("Plantlist?", plantList);
+    console.log(this.state.plants);
 
     return (
       <>
@@ -87,6 +125,7 @@ class App extends Component {
         <Header />
 
         <Routes>
+          <Route path="/" element={<AllPlants />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/addNew" element={<AddNew />} />
           <Route path="/yourGarden" element={<YourGarden />} />
@@ -98,7 +137,7 @@ class App extends Component {
           <Route path="/ytapi" element={<Youtube />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        
+        {/* 
         {this.state.plants.map(plant => (
           <PlantCard
             key={plant._id}
@@ -107,12 +146,8 @@ class App extends Component {
             type={plant.type}
             description={plant.description}
           ></PlantCard>
-        ))}
-
-        <Outlet />
+        ))} */}
       </>
-
-
     );
   }
 }

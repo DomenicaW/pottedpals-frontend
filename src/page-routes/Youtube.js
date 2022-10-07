@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 // import { Link, Outlet } from "react-router-dom";
 
+import "../css-sheets/header.css"
+
 const API = "AIzaSyCEXxjr-ZNVAWdnx0AKpUia1qoPxweqSPA";
 const channelId = "UC9afZE1IVR6JhOjKXiEddIA";
 const result = 3;
@@ -18,6 +20,12 @@ class Youtube extends Component {
     };
     this.clicked = this.clicked.bind(this);
   }
+
+
+
+
+
+
   clicked() {
     // console.log('button was clicked');
     fetch(musicURL)
@@ -38,7 +46,13 @@ class Youtube extends Component {
     return (
       <>
         <div>
-          <button style={{color: "red"}} onClick={this.clicked}>Click for Calm</button>
+          <button className="YtBtn" onClick={this.clicked}> Click For Calm 
+          {/* <img
+              src={`${process.env.PUBLIC_URL}mock-images/potted-plant.png`}
+              alt="avatar"
+            /> */}
+            
+            </button>
           {this.state.ytmusic.map((link, i) => {
             console.log(link);
             let video = (
