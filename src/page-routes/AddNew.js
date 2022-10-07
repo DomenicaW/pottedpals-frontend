@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { rawListeners } from "../../../pottedpals-backend/models/Plant";
 
 // STYLING
 import "../css-sheets/addNewForm.css";
