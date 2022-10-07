@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Routes, Navlink, Outlet, Link } from "react-router-dom";
 
 import PlantCard from "../components/PlantCard.js";
+import AddNew from "../page-routes/AddNew.js"
 
 // Styling
 import "../css-sheets/App.css";
@@ -46,6 +47,18 @@ class AllPlants extends Component {
     this.getPlants();
   }
 
+  handleAddPlant = (plant) => {
+    const copyPlants = [...this.state.plants]
+    copyPlants.unshift(plant)
+    this.setState({
+      plants: copyPlants, 
+      name: "",
+      type: "",
+      description: "",
+      img: ""
+    })
+  }
+
   render() {
     console.log(this.state.plants);
     return (
@@ -59,6 +72,7 @@ class AllPlants extends Component {
             description={plant.description}
           ></PlantCard>
         ))}
+        {/* <AddNew handleAddPlant={this.handleAddPlant}/> */}
       </>
     );
   }

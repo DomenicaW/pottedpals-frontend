@@ -36,14 +36,14 @@ import Youtube from "./page-routes/Youtube.js";
 // import Register from "./page-routes/Register.js";
 
 // //ADDING baseURL
-let baseURL = "";
+// let baseURL = "";
 
-if (process.env.NODE_ENV === "development") {
-  baseURL = "http://localhost:3000";
-} else {
-  baseURL = "https://potted-pals-frontend.herokuapp.com/plants";
-}
-console.log("current base url:", baseURL);
+// if (process.env.NODE_ENV === "development") {
+//   baseURL = "http://localhost:3000";
+// } else {
+//   baseURL = "https://potted-pals-frontend.herokuapp.com/plants";
+// }
+// console.log("current base url:", baseURL);
 
 class App extends Component {
   constructor(props) {
@@ -114,26 +114,26 @@ class App extends Component {
   // thiis is what should go in the element that connects to the routes
   // succulentArr = {{succulent}}
 
-  //HANDLE ADD AND DELETE FUNCTIONS
-  handleAddPlant = (plant) => {
-		const copyPlants = [...this.state.plants];
-		copyPlants.unshift(plant);
-		this.setState({ plants: copyPlants });
-	};
+  //!HANDLE ADD AND DELETE FUNCTIONS
+  // handleAddPlant = (plant) => {
+	// 	const copyPlants = [...this.state.plants];
+	// 	copyPlants.unshift(plant);
+	// 	this.setState({ plants: copyPlants });
+	// };
 
-  handleDelete = (id) => {
-		fetch(baseURL + id, {
-			method: 'DELETE',
-			credentials: "include"
-		}).then( res => {
-			const copyPlants = [...this.state.plants];
-			const findIndex = this.state.plants.findIndex(
-					(plant) => plant._id === id
-				);
-			 copyPlants.splice(findIndex, 1);
-			 this.setState({ plants: copyPlants });
-		})
-	}
+  // handleDelete = (id) => {
+	// 	fetch(baseURL + id, {
+	// 		method: 'DELETE',
+	// 		credentials: "include"
+	// 	}).then( res => {
+	// 		const copyPlants = [...this.state.plants];
+	// 		const findIndex = this.state.plants.findIndex(
+	// 				(plant) => plant._id === id
+	// 			);
+	// 		 copyPlants.splice(findIndex, 1);
+	// 		 this.setState({ plants: copyPlants });
+	// 	})
+	// }
 
 
   render() {
