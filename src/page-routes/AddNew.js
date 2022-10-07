@@ -5,6 +5,57 @@ import "../css-sheets/addNewForm.css";
 
 // CLASS BASED COMPONENT
 class AddNew extends Component {
+constructor(props){
+  super(props)
+  this.state = {
+    name:'',
+    type:'',
+    caretaking:'',
+    description:'',
+    img:''
+  }
+}
+
+handleChange = (event) => {
+  this.setState({
+    [event.target.id]: event.target.value
+  })
+}
+
+handleSubmit = (event) => {
+  event.preventDefault()
+  fetch(`${process.env.REACT_APP_BACKEND_URL}`,{
+    method: 'POST',
+    body: JSON.stringify({
+      name: this.state.name,
+      type: this.state.type,
+      caretaking: this.state.caretaking,
+      description: this.state.description,
+      img: this.state.img
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res=> {
+    if(res.ok) {
+      return res.json()
+    }
+    throw new Error(res)
+  })
+  .then(resJson => {
+    this.props.handleAddPlant(resJson)
+    this.setState({
+      name:'',
+      type:'',
+      caretaking:'',
+      description:'',
+      img:''
+    })
+  })
+  .catch((err) => {console.log(err)})
+}
+
   render() {
     return (
       <main className="AddNewBody">

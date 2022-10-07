@@ -12,6 +12,21 @@ class PlantCard extends Component {
     super(props);
     this.state = {};
   }
+
+  // handleDelete = (id) => {
+	// 	fetch(baseURL + id, {
+	// 		method: 'DELETE',
+	// 		credentials: "include"
+	// 	}).then( res => {
+	// 		const copyPlants = [...this.state.plants];
+	// 		const findIndex = this.state.plants.findIndex(
+	// 				(plant) => plant._id === id
+	// 			);
+	// 		 copyPlants.splice(findIndex, 1);
+	// 		 this.setState({ plants: copyPlants });
+	// 	})
+	// }
+
   render() {
     // console.log("data", this.state);
     return (
@@ -25,7 +40,11 @@ class PlantCard extends Component {
         <h5 className="PlantType"> {this.props.type} </h5>
         <h3 className="PlantName"> {this.props.name} </h3>
         <h5 className="PlantDescription"> {this.props.description}</h5>
+
+        {/* <button onClick={() => this.handleDelete(plant._id)} >Delete</button> */}
+
       </div>
+
     );
   }
 }
