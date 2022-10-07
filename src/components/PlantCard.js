@@ -28,7 +28,7 @@ class PlantCard extends Component {
 	// }
 
   render() {
-    console.log("data", this.state);
+    // console.log("data", this.state);
     return (
       <div className="Card">
         <div className="ImgBox">
