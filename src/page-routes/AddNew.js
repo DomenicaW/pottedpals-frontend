@@ -19,8 +19,7 @@ class AddNew extends Component {
   handleChange = event => {
     const target = event.target;
 
-    this.setState({
-    
+    this.setState({ 
       [event.target.name]: event.target.value,
     });
   };

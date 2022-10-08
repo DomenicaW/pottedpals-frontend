@@ -1,5 +1,3 @@
-
-
 .Card {
   background-color: #ffffff;
   width: 200px;
@@ -29,7 +27,7 @@
   object-fit: cover;
 }
 
-.Card button {
+/* .Card button {
   border: none;
   background-color: black;
   height: 35px;
@@ -39,17 +37,39 @@
   font-weight: bold;
   transform: rotate(45deg);
   /* margin: -105px; */
-  /* align-content: center; */
-  position: absolute;
-  margin-top: -20px;
-  margin-left: 80px;
-  /* align-items: center; */
+/* align-content: center; */
+/* position: absolute; */
+/* margin-top: -20px; */
+/* margin-left: 80px; */
+/* align-items: center; */
 
+/* }  */
+
+.Card button {
+  border: none;
+  background-color: black;
+  height: 35px;
+  width: 80px;
+  /* margin: -105px; */
+  /* margin-top: -25px; */
+  margin-left: 10px;
+  margin-right: 10px;
+  align-content: space-around;
+  padding: 10px;
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  border-radius: 50px;
+  border: 2px solid   #b3c1b7;
 }
 
 .Card button:focus {
   border: none;
   outline: none;
+}
+
+.Card button:hover {
+  background-color: #a4b3a3;
 }
 
 .PlantType {
