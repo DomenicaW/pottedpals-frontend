@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Routes, Navlink, Outlet, Link } from "react-router-dom";
 
 import PlantCard from "../components/PlantCard.js";
-import AddNew from "../page-routes/AddNew.js"
+import AddNew from "../page-routes/AddNew.js";
 
 // Styling
 import "../css-sheets/App.css";
@@ -47,18 +47,43 @@ class AllPlants extends Component {
     this.getPlants();
   }
 
-  handleAddPlant = (plant) => {
-    const copyPlants = [...this.state.plants]
-    copyPlants.unshift(plant)
+  handleAddPlant = plant => {
+    const copyPlants = [...this.state.plants];
+    copyPlants.unshift(plant);
     this.setState({
-      plants: copyPlants, 
+      plants: copyPlants,
+      _id: "",
       name: "",
       type: "",
       description: "",
-      img: ""
-    })
-    // res.redirect('/')
-  }
+      img: "",
+    });
+  };
+
+  //   handleDelete = (id) => {
+  // 	fetch(baseURL + id, {
+  // 		method: 'DELETE',
+  // 		// credentials: "include"
+  // 	}).then( response => {
+  // 	const findIndex = this.state.plants.findIndex(
+  // 				(plant) => plant._id === id
+  // 			);
+  //   const copyPlants = [...this.state.plants];
+  // 		 copyPlants.splice(findIndex, 1);
+  // 		 this.setState({ plants: copyPlants });
+  // 	})
+  // }
+
+  handleDelete = id => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL} + id`, {
+      method: "DELETE",
+    }).then(response => {
+      const findIndex = this.state.plants.findIndex(plant => plant._id === id);
+      const copyPlants = [...this.state.plants];
+      copyPlants.splice(findIndex, 1);
+      this.setState({ plants: copyPlants });
+    });
+  };
 
   render() {
     console.log(this.state.plants);
