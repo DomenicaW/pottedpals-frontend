@@ -29,7 +29,7 @@ class AllPlants extends Component {
   }
 
   getPlants = () => {
-    fetch(baseURL + '/')
+    fetch(process.env.REACT_APP_BACKEND_URL)
       .then(res => {
         if (res.status === 200) {
           return res.json();
