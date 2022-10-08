@@ -57,6 +57,7 @@ class AllPlants extends Component {
       description: "",
       img: ""
     })
+    res.redirect('/')
   }
 
   render() {
