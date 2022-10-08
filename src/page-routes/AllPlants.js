@@ -29,7 +29,7 @@ class AllPlants extends Component {
   }
 
   getPlants = () => {
-    fetch(baseURL + '/plants')
+    fetch(baseURL + '/')
       .then(res => {
         if (res.status === 200) {
           return res.json();
