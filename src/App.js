@@ -114,11 +114,12 @@ class App extends Component {
   // thiis is what should go in the element that connects to the routes
   // succulentArr = {{succulent}}
 
-  //!HANDLE ADD AND DELETE FUNCTIONS
+  // !HANDLE ADD AND DELETE FUNCTIONS
   // handleAddPlant = (plant) => {
 	// 	const copyPlants = [...this.state.plants];
 	// 	copyPlants.unshift(plant);
 	// 	this.setState({ plants: copyPlants });
+  //   res.redirect('/')
 	// };
 
   // handleDelete = (id) => {

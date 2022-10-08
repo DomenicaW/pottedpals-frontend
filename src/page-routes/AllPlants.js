@@ -13,7 +13,7 @@ let baseURL = "";
 if (process.env.NODE_ENV === "development") {
   baseURL = "http://localhost:3000";
 } else {
-  baseURL = "https://potted-pals-frontend.herokuapp.com/plants";
+  baseURL = "https://potted-pals-frontend.herokuapp.com";
 }
 console.log("current base url:", baseURL);
 
@@ -29,7 +29,7 @@ class AllPlants extends Component {
   }
 
   getPlants = () => {
-    fetch(baseURL + "/plants")
+    fetch(process.env.REACT_APP_BACKEND_URL)
       .then(res => {
         if (res.status === 200) {
           return res.json();
