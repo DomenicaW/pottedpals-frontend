@@ -75,7 +75,7 @@ class AllPlants extends Component {
   // }
 
   handleDelete = id => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL} + id`, {
+    fetch(process.env.REACT_APP_BACKEND_URL, {
       method: "DELETE",
     }).then(response => {
       const findIndex = this.state.plants.findIndex(plant => plant._id === id);
