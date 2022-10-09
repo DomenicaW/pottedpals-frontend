@@ -96,9 +96,9 @@ class App extends Component {
           <Route path="/housePlants" element={<HousePlants />} />
           <Route path="/herbs" element={<Herbs />} />
           <Route path="/ytapi" element={<Youtube />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<App />} />
         </Routes>
-        
+
         {this.state.plants.map(plant => (
           <PlantCard
             key={plant._id}
