@@ -27,6 +27,18 @@ class PlantCard extends Component {
   //   });
   // };
 
+
+  handleDelete = id => {
+    fetch(process.env.REACT_APP_BACKEND_URL, {
+      method: "DELETE",
+    }).then(response => {
+      const findIndex = this.state.plants.findIndex(plant => plant._id === id);
+      const copyPlants = [...this.state.plants];
+      copyPlants.splice(findIndex, 1);
+      this.setState({ plants: copyPlants });
+    });
+  };
+
   render() {
     // console.log("data", this.state);
     return (
