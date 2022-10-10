@@ -35,7 +35,7 @@ function Header() {
       </div>
       <div className="Title">
 
-        <h1>POTTED PALS</h1>
+        <h1><Link to="/">POTTED PALS</Link></h1>
         <nav className="Navbar">
           <ul>
             <Link to="/succulents">SUCCULENTS</Link>
@@ -50,20 +50,5 @@ function Header() {
   // }
 }
 
-// <<<<<<< HEAD
 
-
-
-  // const location = useLocation ()
-  // console.log("Location", location )
-
-
-
-
-// =======
-
-// const location = useLocation ()
-// console.log("Location", location )
-
-// >>>>>>> 49bdd3d193a9300765f27e64a8def998bb64359c
 export default Header;
