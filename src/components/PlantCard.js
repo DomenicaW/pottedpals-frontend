@@ -12,8 +12,30 @@ class PlantCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      plants: AllPlants
+      plants: [],
+      succulent: [],
+      herb: [],
+      flowers: [],
     };
+  }
+
+  getPlants = () => {
+    fetch(process.env.REACT_APP_BACKEND_URL)
+      .then(res => {
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          return [];
+        }
+      })
+      .then(data => {
+        console.log("data:", data);
+        this.setState({ plants: data.plants });
+      });
+  };
+
+  componentDidMount() {
+    this.getPlants();
   }
   //Need to bring in plant data as STATE for findIndex to work
 
@@ -34,8 +56,8 @@ class PlantCard extends Component {
 
 
   //ADDED DELETE ROUTE AND REMOVED STRING INTERPOLATION
-  handleDelete = id => {
-    fetch(process.env.REACT_APP_BACKEND_URL, {
+  handleDelete = (id) => {
+    fetch(process.env.REACT_APP_BACKEND_URL + id, {
       method: "DELETE",
     }).then(response => {
       const findIndex = this.state.plants.findIndex(plant => plant._id === id);
