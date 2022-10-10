@@ -11,8 +11,13 @@ import AllPlants from "../page-routes/AllPlants";
 class PlantCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      plants: AllPlants
+    };
   }
+  //Need to bring in plant data as STATE for findIndex to work
+
+
 
   // handleDelete = id => {
   //   // event.preventDefault();
@@ -28,6 +33,7 @@ class PlantCard extends Component {
   // };
 
 
+  //ADDED DELETE ROUTE AND REMOVED STRING INTERPOLATION
   handleDelete = id => {
     fetch(process.env.REACT_APP_BACKEND_URL, {
       method: "DELETE",
