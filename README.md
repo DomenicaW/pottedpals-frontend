@@ -63,12 +63,13 @@ plants = {
 }
 
 ## MVP Goals 
-- Users will be able to add plants to their garden.
+- Users will be able to add thier favorite plants to the database.
 - Users can view plant descriptions and instructions on how to care.
 - Users can delete plants from their garden
 - Use an API
 - Contact us page connected to our individual 
 
 ## Stretch Goals
+- Users can add plants to their personal gardens
 - Admin feature that can view, edit, delete all plants
 - Create a ‘planter’ Div that can adjust its image based off the plant that is clicked on. (edited) 
