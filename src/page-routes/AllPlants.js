@@ -75,10 +75,6 @@ class AllPlants extends Component {
   // 	})
   // }
 
-<<<<<<< HEAD
-  handleDelete = id => {
-    fetch(process.env.REACT_APP_BACKEND_URL, {
-=======
   // handleDelete = id => {
   //   fetch(`${process.env.REACT_APP_BACKEND_URL} + plant._id`, {
   //     method: "DELETE",
@@ -100,7 +96,6 @@ class AllPlants extends Component {
     console.log("hitting this route" , id );
     fetch(`${process.env.REACT_APP_BACKEND_URL}`  + '/'  +id, {
       // fetch(baseURL + "/plants" + id, {
->>>>>>> ea8f66eec68d0cfc701146a50217caf33551b46a
       method: "DELETE",
 
     })
@@ -119,11 +114,7 @@ class AllPlants extends Component {
     return (
       <>
         {this.state.plants.map(plant => (
-<<<<<<< HEAD
-       
-=======
           <>
->>>>>>> ea8f66eec68d0cfc701146a50217caf33551b46a
           <PlantCard
             key={plant._id}
             img={plant.img}
@@ -131,11 +122,6 @@ class AllPlants extends Component {
             type={plant.type}
             caretaking={plant.caretaking}
             description={plant.description}
-<<<<<<< HEAD
-          >
-          </PlantCard>
-         
-=======
           ></PlantCard>
            <button className="DButton" onClick={() => this.handleDelete(plant._id)}>Delete</button>
           {/* <button>WHERE IS THIS</button>  */}
@@ -144,7 +130,6 @@ class AllPlants extends Component {
 
 
 
->>>>>>> ea8f66eec68d0cfc701146a50217caf33551b46a
         ))}
         {/* <AddNew handleAddPlant={this.handleAddPlant}/> */}
       </>
