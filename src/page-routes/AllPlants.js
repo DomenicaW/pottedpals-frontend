@@ -90,13 +90,16 @@ class AllPlants extends Component {
     return (
       <>
         {this.state.plants.map(plant => (
+       
           <PlantCard
             key={plant._id}
             img={plant.img}
             name={plant.name}
             type={plant.type}
             description={plant.description}
-          ></PlantCard>
+          >
+          </PlantCard>
+         
         ))}
         {/* <AddNew handleAddPlant={this.handleAddPlant}/> */}
       </>
