@@ -74,15 +74,38 @@ class AllPlants extends Component {
   // 	})
   // }
 
-  handleDelete = id => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL} + plant._id`, {
+  // handleDelete = id => {
+  //   fetch(`${process.env.REACT_APP_BACKEND_URL} + plant._id`, {
+  //     method: "DELETE",
+  //   }).then(response => {
+  //     const findIndex = this.state.plants.findIndex(plant => plant._id === id);
+  //     const copyPlants = [...this.state.plants];
+  //     copyPlants.splice(findIndex, 1);
+  //     this.setState({ plants: copyPlants });
+  //   });
+  // };
+
+
+
+
+
+
+  handleDelete = (id) => {
+    // event.preventDefault();
+    console.log("hitting this route");
+    fetch(`${process.env.REACT_APP_BACKEND_URL}` , {
+      // fetch(baseURL + "/plants" + id, {
       method: "DELETE",
-    }).then(response => {
+
+    })
+    .then(response => {
       const findIndex = this.state.plants.findIndex(plant => plant._id === id);
       const copyPlants = [...this.state.plants];
       copyPlants.splice(findIndex, 1);
       this.setState({ plants: copyPlants });
+
     });
+
   };
 
   render() {
@@ -90,6 +113,7 @@ class AllPlants extends Component {
     return (
       <>
         {this.state.plants.map(plant => (
+          <>   
           <PlantCard
             key={plant._id}
             img={plant.img}
@@ -97,6 +121,13 @@ class AllPlants extends Component {
             type={plant.type}
             description={plant.description}
           ></PlantCard>
+           <button className="DButton" onClick={() => this.handleDelete()}>Delete</button>
+          {/* <button>WHERE IS THIS</button>  */}
+          </>
+
+
+
+      
         ))}
         {/* <AddNew handleAddPlant={this.handleAddPlant}/> */}
       </>
