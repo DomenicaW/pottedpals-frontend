@@ -47,7 +47,7 @@ class AllPlants extends Component {
     this.getPlants();
   }
 
-  handleAddPlant = plant => {
+  handleAddPlant = (plant) => {
     const copyPlants = [...this.state.plants];
     copyPlants.unshift(plant);
     this.setState({
@@ -74,16 +74,18 @@ class AllPlants extends Component {
   // 	})
   // }
 
-  handleDelete = id => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL} + plant._id`, {
-      method: "DELETE",
-    }).then(response => {
-      const findIndex = this.state.plants.findIndex(plant => plant._id === id);
-      const copyPlants = [...this.state.plants];
-      copyPlants.splice(findIndex, 1);
-      this.setState({ plants: copyPlants });
-    });
-  };
+  // handleDelete = id => {
+  //   fetch(`${process.env.REACT_APP_BACKEND_URL} + plant._id`, {
+  //     method: "DELETE",
+  //   }).then(response => {
+  //     const findIndex = this.state.plants.findIndex(plant => plant._id === id);
+  //     const copyPlants = [...this.state.plants];
+  //     copyPlants.splice(findIndex, 1);
+  //     this.setState({ plants: copyPlants });
+  //   });
+  // };
+
+
 
   render() {
     console.log(this.state.plants);

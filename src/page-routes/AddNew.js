@@ -19,12 +19,12 @@ class AddNew extends Component {
   handleChange = event => {
     const target = event.target;
 
-    this.setState({ 
+    this.setState({
       [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     fetch(`${process.env.REACT_APP_BACKEND_URL}`, {
       method: "POST",
@@ -40,7 +40,7 @@ class AddNew extends Component {
       },
     })
       .then(res => res.json())
-    
+
       .then(resJson => {
         this.props.handleAddPlant(resJson);
         this.setState({
@@ -76,22 +76,22 @@ class AddNew extends Component {
               </div>
 
               <div className="input-box">
-                <input type="text" name="type" onChange={this.handleChange} value={this.state.type} placeholder="Is your plant a succulent, house plant, flower or herb" />
+                <input type="text" id="name" name="type" onChange={this.handleChange} value={this.state.type} placeholder="Is your plant a succulent, house plant, flower or herb" />
                 <label htmlFor="type">Type</label>
               </div>
 
               <div className="input-box">
-                <input type="text" name="caretaking" onChange={this.handleChange} value={this.state.caretaking} placeholder="Add care-taking instructions" />
+                <input type="text" id="name" name="caretaking" onChange={this.handleChange} value={this.state.caretaking} placeholder="Add care-taking instructions" />
                 <label htmlFor="caretaking">Care Instructions</label>
               </div>
 
               <div className="input-box">
-                <input type="text" name="description" onChange={this.handleChange} value={this.state.description} placeholder="Plant description" />
+                <input type="text" id="name" name="description" onChange={this.handleChange} value={this.state.description} placeholder="Plant description" />
                 <label htmlFor="description">Description</label>
               </div>
 
               <div className="input-box">
-                <input type="text" name="img" required="" onChange={this.handleChange} value={this.state.img} placeholder="Add image link" />
+                <input type="text" id="name" name="img" required="" onChange={this.handleChange} value={this.state.img} placeholder="Add image link" />
                 <label htmlFor="img">Image Link | URL Only</label>
               </div>
 

@@ -141,7 +141,7 @@ class App extends Component {
     // const plantList = this.state.plants;
     // console.log("Plantlist?", plantList);
     console.log(this.state.plants);
-
+    
     return (
       <>
         <TopNavBar />

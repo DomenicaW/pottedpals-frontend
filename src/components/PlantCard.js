@@ -5,21 +5,22 @@ import "../css-sheets/App.css";
 import "../css-sheets/plantCard.css";
 
 // import App from "./App.js"
-import AllPlants from "../page-routes/AllPlants";
+import AllPlants from "../page-routes/AllPlants.js";
 
 // CLASS BASED COMPONENT
 class PlantCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      plants: []
+      plants: [],
+      id: []
     };
   }
 
   handleDelete = (id) => {
     // event.preventDefault();
-    console.log("hitting this route");
-    fetch(`${process.env.REACT_APP_BACKEND_URL}` , {
+    console.log("hitting this route again and again", this.state );
+    fetch(`${process.env.REACT_APP_BACKEND_URL}` + '/' + id, {
       method: "DELETE",
 
     }).then(response => {
@@ -32,8 +33,22 @@ class PlantCard extends Component {
 
   };
 
+
+
   render() {
+    // {this.state.plants.map(plant => {
+    //
+    //
+    // })}
     // console.log("data", this.state);
+    {this.state.plants.map(plant => {
+      return (
+        <tr key = {plant._id} >
+        </tr>
+      )
+    }
+  )
+  }
     return (
       <div className="Card">
         <div className="ImgBox">
@@ -43,7 +58,7 @@ class PlantCard extends Component {
         <button>ADD</button>
         {/* <button>DELETE</button> */}
 
-        <button onClick={() => this.handleDelete()}>Delete</button>
+        <button onClick={() => this.handleDelete(this.plant._id)}>Delete</button>
 
         <h5 className="PlantType"> {this.props.type} </h5>
         <h3 className="PlantName"> {this.props.name} </h3>
