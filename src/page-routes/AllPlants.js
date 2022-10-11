@@ -123,7 +123,7 @@ class AllPlants extends Component {
             caretaking={plant.caretaking}
             description={plant.description}
           ></PlantCard>
-           <button className="DButton" onClick={() => this.handleDelete(plant._id)}>Delete</button>
+           <button className="DButton" onClick={() => this.handleDelete(plant._id)}>Delete {plant.name}</button>
           {/* <button>WHERE IS THIS</button>  */}
           </>
 
