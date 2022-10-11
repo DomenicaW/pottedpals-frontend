@@ -7,6 +7,9 @@ import "../css-sheets/plantCard.css";
 // import App from "./App.js"
 import AllPlants from "../page-routes/AllPlants";
 
+
+
+
 // CLASS BASED COMPONENT
 class PlantCard extends Component {
   constructor(props) {
@@ -16,26 +19,29 @@ class PlantCard extends Component {
     };
   }
 
-  handleDelete = (id) => {
-    // event.preventDefault();
-    console.log("hitting this route");
-    fetch(`${process.env.REACT_APP_BACKEND_URL}` , {
-      method: "DELETE",
+  // handleDelete = (id) => {
+  //   // event.preventDefault();
+  //   console.log("hitting this route");
+  //   fetch(`${process.env.REACT_APP_BACKEND_URL}` , {
+  //     // fetch(baseURL + "/plants" + id, {
+  //     method: "DELETE",
 
-    }).then(response => {
-      const findIndex = this.state.plants.findIndex(plant => plant._id === id);
-      const copyPlants = [...this.state.plants];
-      copyPlants.splice(findIndex, 1);
-      this.setState({ plants: copyPlants });
+  //   })
+  //   .then(response => {
+  //     const findIndex = this.state.plants.findIndex(plant => plant._id === id);
+  //     const copyPlants = [...this.state.plants];
+  //     copyPlants.splice(findIndex, 1);
+  //     this.setState({ plants: copyPlants });
 
-    });
+  //   });
 
-  };
+  // };
 
   render() {
     // console.log("data", this.state);
+    console.log("id", this.state._id);
     return (
-      <div className="Card">
+      <div key= {this.props.id} className="Card">
         <div className="ImgBox">
           <img src={this.props.img} alt="Plant card" />
         </div>
@@ -43,7 +49,8 @@ class PlantCard extends Component {
         <button>ADD</button>
         {/* <button>DELETE</button> */}
 
-        <button onClick={() => this.handleDelete()}>Delete</button>
+        {/* <button onClick={() => this.handleDelete()}>Delete</button> */}
+
 
         <h5 className="PlantType"> {this.props.type} </h5>
         <h3 className="PlantName"> {this.props.name} </h3>
