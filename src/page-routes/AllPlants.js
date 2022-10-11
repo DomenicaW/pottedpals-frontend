@@ -47,7 +47,7 @@ class AllPlants extends Component {
     this.getPlants();
   }
 
-  handleAddPlant = plant => {
+  handleAddPlant = (plant) => {
     const copyPlants = [...this.state.plants];
     copyPlants.unshift(plant);
     this.setState({
@@ -55,6 +55,7 @@ class AllPlants extends Component {
       _id: "",
       name: "",
       type: "",
+      caretaking: "",
       description: "",
       img: "",
     });
@@ -74,15 +75,43 @@ class AllPlants extends Component {
   // 	})
   // }
 
+<<<<<<< HEAD
   handleDelete = id => {
     fetch(process.env.REACT_APP_BACKEND_URL, {
+=======
+  // handleDelete = id => {
+  //   fetch(`${process.env.REACT_APP_BACKEND_URL} + plant._id`, {
+  //     method: "DELETE",
+  //   }).then(response => {
+  //     const findIndex = this.state.plants.findIndex(plant => plant._id === id);
+  //     const copyPlants = [...this.state.plants];
+  //     copyPlants.splice(findIndex, 1);
+  //     this.setState({ plants: copyPlants });
+  //   });
+  // };
+
+
+
+
+
+
+  handleDelete = (id) => {
+    // event.preventDefault();
+    console.log("hitting this route" , id );
+    fetch(`${process.env.REACT_APP_BACKEND_URL}`  + '/'  +id, {
+      // fetch(baseURL + "/plants" + id, {
+>>>>>>> ea8f66eec68d0cfc701146a50217caf33551b46a
       method: "DELETE",
-    }).then(response => {
+
+    })
+    .then(response => {
       const findIndex = this.state.plants.findIndex(plant => plant._id === id);
       const copyPlants = [...this.state.plants];
       copyPlants.splice(findIndex, 1);
       this.setState({ plants: copyPlants });
+
     });
+
   };
 
   render() {
@@ -90,16 +119,32 @@ class AllPlants extends Component {
     return (
       <>
         {this.state.plants.map(plant => (
+<<<<<<< HEAD
        
+=======
+          <>
+>>>>>>> ea8f66eec68d0cfc701146a50217caf33551b46a
           <PlantCard
             key={plant._id}
             img={plant.img}
             name={plant.name}
             type={plant.type}
+            caretaking={plant.caretaking}
             description={plant.description}
+<<<<<<< HEAD
           >
           </PlantCard>
          
+=======
+          ></PlantCard>
+           <button className="DButton" onClick={() => this.handleDelete(plant._id)}>Delete</button>
+          {/* <button>WHERE IS THIS</button>  */}
+          </>
+
+
+
+
+>>>>>>> ea8f66eec68d0cfc701146a50217caf33551b46a
         ))}
         {/* <AddNew handleAddPlant={this.handleAddPlant}/> */}
       </>

@@ -72,6 +72,27 @@
   background-color: #a4b3a3;
 }
 
+
+Card .Dbutton {
+  border: none;
+  background-color: black;
+  height: 35px;
+  width: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-content: space-around;
+  padding: 10px;
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  border-radius: 50px;
+  border: 2px solid   #b3c1b7;
+
+
+
+
+}
+
 .PlantType {
   font-family: "Raleway", sans-serif;
   font-size: 9px;

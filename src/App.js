@@ -141,7 +141,7 @@ class App extends Component {
     // const plantList = this.state.plants;
     // console.log("Plantlist?", plantList);
     console.log(this.state.plants);
-
+    
     return (
       <>
         <TopNavBar />
@@ -158,9 +158,9 @@ class App extends Component {
           <Route path="/housePlants" element={<HousePlants />} />
           <Route path="/herbs" element={<Herbs />} />
           <Route path="/ytapi" element={<Youtube />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<App />} />
         </Routes>
-        {/* 
+        {/*
         {this.state.plants.map(plant => (
           <PlantCard
             key={plant._id}
